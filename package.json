@@ -1,0 +1,26 @@
+{
+  "name": "wp-copy-content",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BhargavBhandari90/wp-copy-content.git"
+  },
+  "author": "Bunty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BhargavBhandari90/wp-copy-content/issues"
+  },
+  "homepage": "https://github.com/BhargavBhandari90/wp-copy-content#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglyfly": "^1.4.2",
+    "gulp-watch": "^4.3.11"
+  }
+}
