@@ -154,7 +154,7 @@ class WPCopyContentAdmin {
 	public function wpcc_add_custom_meta_boxes( $post_type, $post ) {
 		add_meta_box(
 			'my-meta-box',
-			esc_html__( 'My Meta Box', 'wcc' ),
+			esc_html__( 'WP Copy Content', 'wcc' ),
 			array( $this, 'wpcc_meta_box' ),
 			'post',
 			'side',
