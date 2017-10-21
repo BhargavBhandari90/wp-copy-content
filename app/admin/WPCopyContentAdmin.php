@@ -167,7 +167,7 @@ class WPCopyContentAdmin {
 	 */
 	public function wpcc_meta_box() {
 		?>
-			<label for="wcc_post_title"><?php echo esc_html__( 'Enter post title:', 'wcc' ); ?></label>
+			<label for="wcc_post_title"><?php echo esc_html__( 'Enter post/page title:', 'wcc' ); ?></label>
 			<input type="text" name="wcc_post_title" id="wcc_post_title" />
 			<input type="hidden" name="wcc_post_id" id="wcc_post_id" />
 			<?php wp_nonce_field( 'wpcc-find-posts', '_ajax_nonce', false ); ?>
