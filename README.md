@@ -15,6 +15,9 @@ So now you dont need to find that post/page and copy that content and paste. Jus
 * Select from the search result
 * And fetch the content of selected post/pageg
 
+## Screenshot ##
+![screenshot-1](https://user-images.githubusercontent.com/19459637/31855827-9fee4afc-b6d0-11e7-89bc-191c145ba347.jpg)
+
 
 ## Installation ##
 1. Upload "wp-copy-content" to the "/wp-content/plugins/" directory usong FTP or upload plugin zip using upload button.
