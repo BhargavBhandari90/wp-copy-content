@@ -1,20 +1,21 @@
 var gulp    = require('gulp'),
-    uglyfly = require('gulp-uglyfly'),
+    minify = require('gulp-minify'),
     watch   = require('gulp-watch'),
     rename  = require('gulp-rename');
 
-// Watch tasks.
-gulp.task( 'watch', function() {
-	gulp.watch( './sass/**/*.{scss,sass}', ['sass'] );
-} );
-
 // Compress JS.
 gulp.task('compress', function() {
-  gulp.src('app/assets/js/*.js')
+    gulp.src('app/assets/js/*.js')
     .pipe(gulp.dest('app/assets/js'))
-    .pipe(uglyfly())
-    .pipe(rename('admin.min.js'))
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: ['.combo.js', '-min.js']
+    }))
     .pipe(gulp.dest('app/assets/js'));
 });
 
-gulp.task('default', [ 'watch', 'compress' ]);
+gulp.task('default', [ 'compress' ]);

@@ -142,7 +142,7 @@ class WPCopyContentAdmin {
 	public function wpcc_enqueue_scripts() {
 
 		// Add admin.js.
-		wp_enqueue_script( 'wpcc-jscript', WPCC_URL . 'app/assets/js/admin.js', array(), '1.0.0', true );
+		wp_enqueue_script( 'wpcc-jscript', WPCC_URL . 'app/assets/js/admin.min.js', array(), '1.0.0', true );
 	}
 
 	/**

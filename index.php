@@ -45,17 +45,12 @@ if ( ! defined( 'WPCC_BASE_NAME' ) ) {
 	define( 'WPCC_BASE_NAME', plugin_basename( __FILE__ ) );
 }
 
-// function wp_copy_content_autoloader( $class ) {
-// 	echo $class;
-// 	if ( file_exists( WPCC_PATH . 'admin/' . $class . '.php' ) ) {
-// 		include WPCC_PATH . 'app/admin/' . $class . '.php';
-// 	}
-// }
-
-// spl_autoload_register( 'wp_copy_content_autoloader' );
-
+// Include file.
 if ( is_admin() ) {
+
+	// Include admin functions file.
 	require WPCC_PATH . 'app/admin/WPCopyContentAdmin.php';
 
+	// Object for admin class.
 	new WPCopyContentAdmin();
 }
