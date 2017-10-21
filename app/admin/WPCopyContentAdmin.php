@@ -152,11 +152,21 @@ class WPCopyContentAdmin {
 	 * @param object $post Post object.
 	 */
 	public function wpcc_add_custom_meta_boxes( $post_type, $post ) {
+
+		// Get post types.
+		$post_types = get_post_types(
+			array(
+				'public' => true,
+			),
+			'objects'
+		);
+		unset( $post_types['attachment'] );
+
 		add_meta_box(
 			'my-meta-box',
 			esc_html__( 'WP Copy Content', 'wcc' ),
 			array( $this, 'wpcc_meta_box' ),
-			'post',
+			array_keys( $post_types ),
 			'side',
 			'high'
 		);
