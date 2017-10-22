@@ -177,12 +177,12 @@ class WPCopyContentAdmin {
 	 */
 	public function wpcc_meta_box() {
 		?>
-			<label for="wcc_post_title"><?php echo esc_html__( 'Enter post/page title:', 'wcc' ); ?></label>
-			<input type="text" name="wcc_post_title" id="wcc_post_title" />
-			<input type="hidden" name="wcc_post_id" id="wcc_post_id" />
-			<?php wp_nonce_field( 'wpcc-find-posts', '_ajax_nonce', false ); ?>
-			<input class="button" id="wcc_fetch_button" value="<?php echo esc_html__( 'Fetch Content', 'wpcc' ); ?>" type="button" style="display:none;">
-			<div id="wpcc-spiner" class="spinner"></div>
+		<label for="wcc_post_title"><?php echo esc_html__( 'Enter post/page title:', 'wcc' ); ?></label>
+		<input type="text" name="wcc_post_title" id="wcc_post_title" />
+		<input type="hidden" name="wcc_post_id" id="wcc_post_id" />
+		<?php wp_nonce_field( 'wpcc-find-posts', '_ajax_nonce', false ); ?>
+		<input class="button" id="wcc_fetch_button" value="<?php echo esc_html__( 'Fetch Content', 'wpcc' ); ?>" type="button" style="display:none;">
+		<div id="wpcc-spiner" class="spinner"></div>
 		<?php
 	}
 }
