@@ -23,6 +23,9 @@ So now you dont need to find that post/page and copy that content and paste. Jus
 2. Activate the plugin through the "Plugins" menu in WordPress.
 
 ## Changelog ##
+= 2.0.1 =
+* Text change for metabox.
+
 = 2.0.0 =
 * Addded compatibility with Block Editor.
 

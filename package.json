@@ -1,6 +1,6 @@
 {
   "name": "wp-copy-content",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Copy content from existing post",
   "main": "Gruntfile.js",
   "scripts": {

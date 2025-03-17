@@ -4,7 +4,7 @@ Tags: content, copy, wordpress editor, block editor
 Requires at least: 4.0
 Tested up to: 6.7.2
 Requires PHP: 5.6
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,9 @@ So now you dont need to find that post/page and copy that content and paste. Jus
 [https://github.com/BhargavBhandari90/wp-copy-content](https://github.com/BhargavBhandari90/wp-copy-content)
 
 == Changelog ==
+= 2.0.1 =
+* Text change for metabox.
+
 = 2.0.0 =
 * Addded compatibility with Block Editor.
 
