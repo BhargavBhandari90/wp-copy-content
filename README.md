@@ -1,5 +1,4 @@
-# WordPress Copy Content
-
+# Copy Block Content
 
 #### Copy content from existing posts, pages and any custom post types.
 
@@ -24,5 +23,8 @@ So now you dont need to find that post/page and copy that content and paste. Jus
 2. Activate the plugin through the "Plugins" menu in WordPress.
 
 ## Changelog ##
+= 2.0.0 =
+* Addded compatibility with Block Editor.
+
 = 1.0.0 =
 * Initial release.

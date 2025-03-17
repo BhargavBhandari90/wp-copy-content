@@ -1,10 +1,10 @@
-=== WordPress Copy Content ===
+=== Copy Block Content ===
 Contributors: bhargavbhandari90
-Tags: content, copy, post, page, custom post type
+Tags: content, copy, wordpress editor, block editor
 Requires at least: 4.0
-Tested up to: 4.8.2
+Tested up to: 6.7.2
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,12 @@ So now you dont need to find that post/page and copy that content and paste. Jus
 == Screenshots ==
 1. Search the post/page by it's title screenshot-1.jpg.
 
+== GitHub Repo ==
+[https://github.com/BhargavBhandari90/wp-copy-content](https://github.com/BhargavBhandari90/wp-copy-content)
+
 == Changelog ==
+= 2.0.0 =
+* Addded compatibility with Block Editor.
+
 = 1.0.0 =
 * Initial release.

@@ -86,12 +86,14 @@ class WPCopyContentAdmin {
 		add_filter( 'posts_where', array( $this, 'wpcc_posts_where' ), 10, 2 );
 
 		// Set query for posts.
-		$posts = new WP_Query( array(
-			'post_type' => array_keys( $post_types ),
-			'post_status' => 'any',
-			'posts_per_page' => 50,
-			'no_found_rows' => true,
-		));
+		$posts = new WP_Query(
+			array(
+				'post_type'      => array_keys( $post_types ),
+				'post_status'    => 'any',
+				'posts_per_page' => 50,
+				'no_found_rows'  => true,
+			)
+		);
 
 		// Remove filter after query build.
 		remove_filter( 'posts_where', array( $this, 'wpcc_posts_where' ), 10, 2 );
@@ -117,7 +119,7 @@ class WPCopyContentAdmin {
 	 * @param object $wp_query Reference by wp_query.
 	 * @return string $where Modified where statement.
 	 */
-	function wpcc_posts_where( $where, &$wp_query ) {
+	public function wpcc_posts_where( $where, $wp_query ) {
 
 		check_ajax_referer( 'wpcc-find-posts' );
 
@@ -142,7 +144,7 @@ class WPCopyContentAdmin {
 	public function wpcc_enqueue_scripts() {
 
 		// Add admin.js.
-		wp_enqueue_script( 'wpcc-jscript', WPCC_URL . 'app/assets/js/admin.min.js', array(), '1.0.0', true );
+		wp_enqueue_script( 'wpcc-jscript', WPCC_URL . 'assets/js/admin.js', array( 'jquery' ), WPCC_VERSION, true );
 	}
 
 	/**

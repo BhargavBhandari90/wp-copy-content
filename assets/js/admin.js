@@ -91,6 +91,7 @@
 				}
 			}
 		}, options );
+
 		$element.on( 'keydown', function() {
 			$element.removeAttr( 'aria-activedescendant' );
 		} )
@@ -140,9 +141,13 @@
 			} ).done( function( data ) {
 				if( data.success ) {
 
-					// Set content to editor.
-					tinyMCE.activeEditor.setContent( data.data );
+					if ( typeof wp !== 'undefined' && wp.data && wp.data.select( 'core/editor' ) ) {
+						wp.data.dispatch('core/editor').editPost( { content: data.data } );
+					} else {
+						tinyMCE.activeEditor.setContent( data.data );
+					}
 					$( '#wcc_post_id' ).val( 0 );
+					$( texfield ).val('');
 					$( '#wcc_fetch_button' ).hide();
 				} else {
 
@@ -157,9 +162,13 @@
 	}
 
 	// Call function suggest posts.
-	$( texfield ).wpPostSuggest();
+	if ( $( texfield ).length > 0 ) {
+		$( texfield ).wpPostSuggest();
+	}
 
 	// Copy the content.
-	$( copybutton ).wpCopyContent();
+	if ( $( copybutton ).length > 0 ) {
+		$( copybutton ).wpCopyContent();
+	}
 
 }( jQuery ) );

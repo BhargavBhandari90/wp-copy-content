@@ -1,15 +1,16 @@
 <?php
-/*
-Plugin Name:  WordPress Copy Content
-Plugin URI:   https://developer.wordpress.org/plugins/the-basics/
-Description:  Copy content from existing post
-Version:      1.0.0
-Author:       Bunty
-Author URI:   https://bhargavb.com/
-License:      GPL2
-License URI:  https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:  wcc
-*/
+/**
+ * Plugin Name:  Copy Block Content
+ * Description:  Copy content from existing post to your block editor.
+ * Version:      2.0.0
+ * Author:       Bunty
+ * Author URI:   https://bhargavb.com/
+ * License:      GPL2
+ * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:  wcc
+ *
+ * @package CopyContent.
+ */
 
 /**
  * Main file, contains the plugin metadata and activation processes
@@ -21,7 +22,7 @@ if ( ! defined( 'WPCC_VERSION' ) ) {
 	/**
 	 * The version of the plugin.
 	 */
-	define( 'WPCC_VERSION', '1.0.0' );
+	define( 'WPCC_VERSION', '2.0.0' );
 }
 
 if ( ! defined( 'WPCC_PATH' ) ) {
