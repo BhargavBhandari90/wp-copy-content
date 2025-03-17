@@ -1,0 +1,23 @@
+{
+    "name": "bhargav/wp-copy-content",
+    "autoload": {
+        "psr-4": {
+            "Bhargav\\CopyContent\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bunty",
+            "email": "bn.bhandari90@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "automattic/vipwpcs": "^2.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
