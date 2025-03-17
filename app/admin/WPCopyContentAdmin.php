@@ -42,7 +42,7 @@ class WPCopyContentAdmin {
 
 		// If post is not available, then throw error.
 		if ( 0 === $post_id ) {
-			wp_send_json_error( esc_html__( 'Post is not available.', 'wpcc' ) );
+			wp_send_json_error( esc_html__( 'Post is not available.', 'wcc' ) );
 		}
 
 		// Get the content from post ID.
@@ -52,7 +52,7 @@ class WPCopyContentAdmin {
 		if ( $content ) {
 			wp_send_json_success( $content );
 		} else {
-			wp_send_json_error( esc_html__( 'Content is not available.', 'wpcc' ) );
+			wp_send_json_error( esc_html__( 'Content is not available.', 'wcc' ) );
 		}
 
 		wp_die();
@@ -103,7 +103,7 @@ class WPCopyContentAdmin {
 
 		// Send error message of no posts found.
 		if ( ! $posts ) {
-			wp_send_json_error( esc_html__( 'No items found.', 'wpcc' ) );
+			wp_send_json_error( esc_html__( 'No items found.', 'wcc' ) );
 		}
 
 		// Send json response.
@@ -144,7 +144,11 @@ class WPCopyContentAdmin {
 	public function wpcc_enqueue_scripts() {
 
 		// Add admin.js.
-		wp_enqueue_script( 'wpcc-jscript', WPCC_URL . 'assets/js/admin.js', array( 'jquery' ), WPCC_VERSION, true );
+		$jsfile = 'admin.min.js';
+		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+			$jsfile = 'admin.js';
+		}
+		wp_enqueue_script( 'wpcc-jscript', WPCC_URL . 'assets/js/' . $jsfile, array( 'jquery' ), WPCC_VERSION, true );
 	}
 
 	/**
@@ -183,7 +187,7 @@ class WPCopyContentAdmin {
 		<input type="text" name="wcc_post_title" id="wcc_post_title" />
 		<input type="hidden" name="wcc_post_id" id="wcc_post_id" />
 		<?php wp_nonce_field( 'wpcc-find-posts', '_ajax_nonce', false ); ?>
-		<input class="button" id="wcc_fetch_button" value="<?php echo esc_html__( 'Fetch Content', 'wpcc' ); ?>" type="button" style="display:none;">
+		<input class="button" id="wcc_fetch_button" value="<?php echo esc_html__( 'Fetch Content', 'wcc' ); ?>" type="button" style="display:none;">
 		<div id="wpcc-spiner" class="spinner"></div>
 		<?php
 	}

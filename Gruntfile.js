@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            src: ["app/assets/js/*.js", "!app/assets/js/*.min.js"],
+            src: ["assets/js/*.js", "!assets/js/*.min.js"],
             dest: "assets/js",
             cwd: ".",
             rename: function (dst, src) {
