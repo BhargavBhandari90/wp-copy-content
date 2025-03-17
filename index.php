@@ -50,8 +50,8 @@ if ( ! defined( 'WPCC_BASE_NAME' ) ) {
 if ( is_admin() ) {
 
 	// Include admin functions file.
-	require WPCC_PATH . 'app/admin/WPCopyContentAdmin.php';
+	require WPCC_PATH . 'app/admin/class-copy-block-content-admin.php';
 
 	// Object for admin class.
-	new WPCopyContentAdmin();
+	new Copy_Block_Content_Admin();
 }

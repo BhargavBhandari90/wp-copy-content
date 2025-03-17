@@ -2,15 +2,15 @@
 /**
  * Functions of WP Copy Content's admin functions.
  *
- * @package WPCopyContent
+ * @package CopyContent
  */
 
 /**
  * Class for admin.
  *
- * @package WPCopyContent
+ * @package CopyContent
  */
-class WPCopyContentAdmin {
+class Copy_Block_Content_Admin {
 
 	/**
 	 * Cunstructor for admin class.
