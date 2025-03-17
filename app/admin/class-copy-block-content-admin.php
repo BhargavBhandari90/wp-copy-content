@@ -170,7 +170,7 @@ class Copy_Block_Content_Admin {
 
 		add_meta_box(
 			'my-meta-box',
-			esc_html__( 'WP Copy Content', 'wcc' ),
+			esc_html__( 'Copy Content From', 'wcc' ),
 			array( $this, 'wpcc_meta_box' ),
 			array_keys( $post_types ),
 			'side',
