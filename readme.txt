@@ -2,7 +2,7 @@
 Contributors: bhargavbhandari90
 Tags: content, copy, wordpress editor, block editor
 Requires at least: 4.0
-Tested up to: 6.7.2
+Tested up to: 7.0
 Requires PHP: 5.6
 Stable tag: 2.0.1
 License: GPLv2 or later
